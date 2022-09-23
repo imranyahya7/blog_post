@@ -35,7 +35,6 @@ class PostController extends Controller
 
     public function show(Post $post)
     {
-        // $this->postService->show($request->all());
         return view('show-post',compact('post'));
     }
 
