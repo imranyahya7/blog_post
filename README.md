@@ -1,12 +1,12 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 
-php artisan cp .env.example .env
-php artisan key:generate
-composer require laravel/ui "^1.0" --dev
-php artisan ui bootstrap --auth 
-npm install
-npm run dev
+<p> php artisan cp .env.example .env </p>
+<p> php artisan key:generate </p>
+<p> composer require laravel/ui "^1.0" --dev </p>
+<p> php artisan ui bootstrap --auth  </p>
+<p> npm install </p>
+<p> npm run dev </p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
