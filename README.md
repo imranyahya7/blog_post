@@ -7,6 +7,8 @@
 <p> php artisan ui bootstrap --auth  </p>
 <p> npm install </p>
 <p> npm run dev </p>
+<p> php artisan migrate --seed </p>
+<p> php artisan serve </p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
