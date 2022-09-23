@@ -48,14 +48,17 @@
                         <div class="blog-post">
                             @foreach ($posts as $post)
                                 <h2 class="blog-post-title">{{ $post->post_title }}</h2>
-                                <p class="blog-post-meta"><u>Posted at</u>  :
+                                <p class="blog-post-meta"><u>Posted at</u> :
                                     {{ date('l, F d Y', strtotime($post->created_at)) }} at
                                     {{ date('h:i a', strtotime($post->created_at)) }} by <a
                                         href="#">{{ $post->users->name }}</a></p>
                                 <p><u>Post Body</u> : {{ substr($post->post, 0, 20) }}...<a
                                         href="{{ route('show_post', $post->id) }}">Read more</a></p>
-                                <a href="{{ route('edit_post', $post->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                                <a href="{{ route('delete_post', $post->id) }}" class="btn btn-sm btn-danger">Delete</a>
+                                @if (auth()->user()->id == $post->users->id)
+                                    <a href="{{ route('edit_post', $post->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                    <a href="{{ route('delete_post', $post->id) }}"
+                                        class="btn btn-sm btn-danger">Delete</a>
+                                @endif
                                 <hr>
                             @endforeach
                         </div>

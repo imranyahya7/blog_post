@@ -12,8 +12,10 @@
                             <p class="blog-post-meta">{{ date('l, F d Y', strtotime($post->created_at)) }} at {{date('h:i a', strtotime($post->created_at))}} by <a
                                     href="#">{{ $post->users->name }}</a></p>
                             <p>{{ $post->post }}</p>
-                            <a href="{{ route('edit_post', $post->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                            <a href="{{ route('delete_post', $post->id) }}" class="btn btn-sm btn-danger">Delete</a>
+                            @if (auth()->user()->id == $post->user_id)
+                                <a href="{{ route('edit_post', $post->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                <a href="{{ route('delete_post', $post->id) }}" class="btn btn-sm btn-danger">Delete</a>
+                            @endif
                             <a href="{{ route('home') }}" class="btn btn-sm btn-info">Go back</a>
                         </div>
                     </div>
