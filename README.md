@@ -10,6 +10,7 @@
 <p> npm run dev </p>
 <p> php artisan migrate --seed </p>
 <p> php artisan serve </p>
+<p> user seeder = (name: imran, email: imran@gmail.com with password:  123456789) </p>
 
 ## Contributing
 
